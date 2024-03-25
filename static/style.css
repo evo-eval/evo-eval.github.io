@@ -24,7 +24,7 @@
     td {
       text-align: center;
       /*font-size: 1.2em;*/
-padding: 0 15px;
+        padding: 0 15px;
     }
     td img {
         width: 1em;
@@ -85,9 +85,20 @@ padding: 0 15px;
     }
 
     .container {
-        width: 50%;
+        max-width: 1000px;
         margin: 0 auto;
     }
+
+    .align {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .inline-block-child {
+  display: inline-block;
+}
 
     @media screen and (max-width: 2000px) {
       body {
