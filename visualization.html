@@ -21,9 +21,83 @@
     });
   </script>
 </head>
-<body>
+<body onLoad="fetchJSONData(['gpt-4', 'gpt-4-turbo', 'claude-3'])">
 
 <div id="header"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // some default stuff
+    Chart.defaults.font.family = 'Roboto Condensed';
+    function fetchJSONData(models) {
+        fetch("./data.json")
+            .then((res) => {
+                if (!res.ok) {
+                    throw new Error
+                        (`HTTP error! Status: ${res.status}`);
+                }
+                return res.json();
+            })
+            .then((data) => {
+                draw_chart(models, data);
+            })
+            .catch((error) =>
+                   console.error("Unable to fetch data:", error));
+    }
+
+    function draw_chart(models, model_data) {
+      var ctx = document.getElementById('myChart');
+
+      var dataset_labels = ['HumanEval', 'Difficult', 'Creative', 'Subtle', 'Combine', 'Tool Use'];
+      var graph_data = []
+      for (var i = 0; i < model_data.length; i++) {
+          if (models.includes(model_data[i].name)) {
+              graph_data.push(
+                  {label: model_data[i].name,
+                   data:  [model_data[i].humaneval, model_data[i].EvoEval_difficult, model_data[i].EvoEval_creative, model_data[i].EvoEval_subtle, model_data[i].EvoEval_combine, model_data[i].EvoEval_tool_use],
+                   fill: true
+                  });
+          }
+      }
+
+      var data = {
+      labels: dataset_labels,
+      datasets: graph_data
+    };
+
+      new Chart(ctx, {
+       type: 'radar',
+      data: data,
+      options: {
+        elements: {
+          line: {
+            borderWidth: 3
+          }
+        },
+        scales: {
+            r: {
+                suggestedMin: 0.2,
+                suggestedMax: 1
+            }
+        },
+          plugins: {
+            legend: {
+                labels: {
+                    font: {
+                        size: 15,
+                        family: 'Roboto Condensed'
+                    }
+                }
+            }
+        }
+      }
+      });
+        }
+</script>
+
+<div class="container">
+    <canvas id="myChart"></canvas>
+</div>
 
 </body>
 </html>
