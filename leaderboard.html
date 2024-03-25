@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.3.3/dist/echarts.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="https://images.emojiterra.com/google/noto-emoji/unicode-15/color/1024px/1f9d1-1f4bb.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/style.css">
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous">
+    </script>
+    <script>
+    $(function(){
+      $("#header").load("header.html");
+    });
+  </script>
+
+
+
+    <script>
+
+        function map_id_to_name(name) {
+            var new_name = name
+            new_name = new_name.replace("gpt-4", "GPT-4")
+            new_name = new_name.replace("turbo", "Turbo")
+            new_name = new_name.replace("claude", "Claude")
+            new_name = new_name.replace("gemini-pro", "Gemini")
+            new_name = new_name.replace("palm", "PaLM-2")
+            new_name = new_name.replace("deepseek-coder", "DeepSeeker")
+            new_name = new_name.replace("code-llama", "CodeLlamma")
+            new_name = new_name.replace("chatgpt", "ChatGPT")
+            new_name = new_name.replace("-instruct", "-Inst")
+            new_name = new_name.replace("qwen", "Qwen")
+            new_name = new_name.replace("-python", "")
+            new_name = new_name.replace("coder", "Coder")
+            new_name = new_name.charAt(0).toUpperCase() + new_name.slice(1);
+            return new_name
+        }
+
+        function map_id_to_logo(name) {
+            if (name.includes("deepseek")) {
+                return "deepseek.png"
+            }
+            else if (name.includes("gemini-pro") || name.includes("palm") || name.includes("gemma")) {
+                return "google.png"
+            }
+            else if (name.includes("gpt-4") || name.includes("chatgpt") || name.includes("gpt-4-turbo")) {
+                return "openai.png"
+            }
+            else if (name.includes("claude")) {
+                return "anthropic.png"
+            }
+            else if (name.includes("mistral") || name.includes("mixtral")) {
+                return "mistral.png"
+            }
+            else if (name.includes("code-llama")) {
+                return "meta.png"
+            }
+            else if (name.includes("phi-2")) {
+                return "microsoft.png"
+            }
+            else {
+                return ""
+            }
+        }
+
+        function check_instruct_tuned(name) {
+            if (name.includes("instruct")) {
+                return true
+            }
+            else if (['gpt-4-turbo', 'gpt-4', 'chatgpt', 'gemini-pro', 'palm', 'openchat', 'wizardcoder-34b', 'palm',
+                      'code-millenials-34b', "qwen-72b-1.5", "qwen-14b-1.5", "qwen-7b-1.5",
+                      "qwen-14b", "qwen-7b", 'speechless-codellama-34b', 'claude-3', 'claude-3-haiku', 'claude-2',
+                      'wizardcoder-33b-1.1', 'xwincoder-34b', "magicoder-s-ds-6.7b", "magicoder-s-cl-7b"].includes(name)) {
+                return true
+            }
+            else {
+                return false
+            }
+        }
+
+        function compare( a, b ) {
+          if (a.humaneval < b.humaneval ){
+            return 1;
+          }
+          if (a.humaneval > b.humaneval){
+            return -1;
+          }
+          return 0;
+        }
+        // get data from json
+        function fetchJSONData(selector) {
+            fetch("./data.json")
+                .then((res) => {
+                    if (!res.ok) {
+                        throw new Error
+                            (`HTTP error! Status: ${res.status}`);
+                    }
+                    return res.json();
+                })
+                .then((data) => {
+                    console.log(data);
+                    // generate table
+                    buildHtmlTable(data, selector);
+                })
+                .catch((error) =>
+                       console.error("Unable to fetch data:", error));
+        }
+        function buildHtmlTable(data, selector) {
+          data.sort(compare)
+          var headers = ['HumanEval', 'Difficult', 'Creative', 'Subtle', 'Combine', 'Tool Use']
+          addAllColumnHeaders(headers, selector);
+
+          let header_dataset_map = new Map();
+          // used to map header to dataset
+          header_dataset_map.set('HumanEval', 'humaneval');
+          header_dataset_map.set('Difficult', 'EvoEval_difficult');
+          header_dataset_map.set('Creative', 'EvoEval_creative');
+          header_dataset_map.set('Subtle', 'EvoEval_subtle');
+          header_dataset_map.set('Combine', 'EvoEval_combine');
+          header_dataset_map.set('Tool Use', 'EvoEval_tool_use');
+
+          for (var i = 0; i < data.length; i++) {
+            var row$ = $('<tr/>');
+            var model_name = "";
+            var logo = map_id_to_logo(data[i].name);
+            if (logo === "") {
+
+            } else {
+                model_name = model_name + '<img src="resources/' + logo + '">';
+            }
+            model_name = model_name + '<b>'+ map_id_to_name(data[i].name) + '</b>';
+            if (check_instruct_tuned(data[i].name)) {
+                row$.append($('<td/>').html(model_name + '<img src="static/speech.png">').attr("class", "nametd"));
+            } else {
+                row$.append($('<td/>').html(model_name).attr("class", "nametd"));
+            }
+
+
+            for (var j = 0; j < headers.length; j++) {
+              var cellValue = (100*data[i][header_dataset_map.get(headers[j])]).toFixed(1);
+              if (cellValue == null) cellValue = "N/A";
+              row$.append($('<td/>').html(cellValue));
+
+              var cellRank = (data[i][header_dataset_map.get(headers[j])+ "_rank"]);
+              // if rank <= 3 mark in red
+              if (cellRank == 1) {
+                 row$.append($('<td/>').html("🥇").attr("class", "smalltd"));
+              }
+              else if (cellRank == 2) {
+                row$.append($('<td/>').html("🥈").attr("class", "smalltd"));
+              } else if (cellRank == 3) {
+                row$.append($('<td/>').html("🥉").attr("class", "smalltd"));
+              } else {
+                row$.append($('<td/>').html(cellRank).attr("class", "smalltd"));
+              }
+            }
+
+            $(selector).append(row$);
+          }
+        }
+
+        function addAllColumnHeaders(headers, selector) {
+          var datasetTr$ = $('<tr/>');
+          datasetTr$.append($('<th/>').html(''));
+          for (var i = 0; i < headers.length; i++) {
+            var rowHash = headers[i];
+            var path = ""
+            if (rowHash === "Difficult") {
+                path = "resources/butterfly_blue.png"
+            } else if (rowHash === "Creative") {
+                path = "resources/butterfly_purple.png"
+            } else if (rowHash == "Subtle") {
+                path = "resources/butterfly_turq.png"
+            } else if (rowHash == "Combine") {
+                path = "resources/butterfly_yellow.png"
+            } else if (rowHash == "Tool Use") {
+                path = "resources/butterfly_red.png"
+            }
+
+            if (path === "") {
+                datasetTr$.append($('<th/>').html(rowHash).attr('colspan', 2));
+            } else {
+                datasetTr$.append($('<th/>').html('<img src="' + path + '">' + rowHash ).attr('colspan', 2));
+            }
+          }
+            $(selector).append(datasetTr$);
+
+          var headerTr$ = $('<tr/>');
+
+          // always add model column
+          headerTr$.append($('<th/>').html('Model'));
+
+          for (var i = 0; i < headers.length; i++) {
+            headerTr$.append($('<th/>').html('pass@1'));
+            headerTr$.append($('<th/>').html('rank'));
+          }
+          $(selector).append(headerTr$);
+        }
+
+    </script>
+
+
+</head>
+<body>
+
+<div id="header"></div>
+
+  <div id="content" class="container-fluid d-flex flex-column align-items-center gap-3">
+
+
+      <h3 class="text-nowrap mt-5"> 🏆 Leaderboard 🏆 </h3>
+      <p>
+          Leaderboard shows the <b>pass@1</b> and <b>ranking</b> of LLMs on EvoEval benchmarks. We label instruction-following models
+          with <img src="static/speech.png">.
+      </p>
+</div>
+
+<body onLoad="fetchJSONData('#leaderboardtable')">
+  <table id="leaderboardtable" class="centerTable">
+  </table>
+</body>
+
+</body>
+</html>

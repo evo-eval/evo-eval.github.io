@@ -1,0 +1,116 @@
+    body {
+  font-family: "Roboto Condensed", sans-serif;
+      background-color: #FFFFFF;
+      color: #000000;
+    }
+    .centerTable {
+        margin: 5px auto;
+        border: 3px solid #8e7cc3;
+    }
+
+    #content {
+      width: 75%;
+    }
+    p {
+        /*text-align: center;*/
+    }
+    p img {
+        width: 1em;
+        height: auto;
+        margin: 2px;
+    }
+
+    th,
+    td {
+      text-align: center;
+      /*font-size: 1.2em;*/
+padding: 0 15px;
+    }
+    td img {
+        width: 1em;
+        height: auto;
+        margin: 2px;
+    }
+    tr:nth-child(even) td{
+      background-color: #f2f2f2;
+    }
+    tr:nth-child(odd) td{
+      background-color: #e3dfed;
+    }
+
+
+    .smalltd {
+        border-right: 2px solid black;
+    }
+
+    .nametd {
+        text-align: left;
+        /*border-left: 2px solid black;*/
+        border-right: 2px solid black;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+    th img {
+        width: 1em;
+        height: auto;
+        margin: 2px;
+    }
+
+    .scale
+{
+    height: auto;
+    width: 1em;
+}
+
+    #notes {
+      font-size: 1em;
+    }
+
+    #notes h3 {
+      margin-top: 1em;
+      font-size: 2em;
+      text-align: center;
+    }
+
+    #notes li {
+      font-size: 1.2em;
+      font-weight: 300;
+      margin: 1em;
+    }
+
+    .form-select {
+      font-size: 1em;
+    }
+
+    @media screen and (max-width: 2000px) {
+      body {
+        font-size: 1.6vw;
+      }
+
+      #content {
+        width: 100%;
+      }
+
+      h1 {
+        font-size: 1.5em;
+          text-align: center;
+      }
+
+      h2 {
+        font-size: 1.6em;
+          padding-top: 1.5em;
+      }
+
+      h3 {
+        font-size: 1.2em;
+      }
+
+
+      table {
+        font-size: small;
+      }
+
+
+    }
