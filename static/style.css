@@ -7,6 +7,11 @@
         margin: 5px auto;
         border: 3px solid #8e7cc3;
     }
+    .centerTableNoBottom {
+        margin: 5px auto;
+        border: 3px solid #8e7cc3;
+        border-bottom: 0;
+     }
 
     #content {
       width: 75%;
@@ -15,6 +20,17 @@
         /*text-align: center;*/
     }
     p img {
+        width: 1em;
+        height: auto;
+        margin: 2px;
+    }
+
+    .text {
+        width: 60%;
+        font-size: 0.8em;
+        margin: 0 auto;
+    }
+    .text img {
         width: 1em;
         height: auto;
         margin: 2px;
@@ -110,7 +126,7 @@
       }
 
       h1 {
-        font-size: 1.5em;
+          font-size: 1.5em;
           text-align: center;
       }
 
