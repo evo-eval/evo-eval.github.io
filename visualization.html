@@ -82,10 +82,12 @@
                                     // clear selection
                                     select.options[i].selected = false;
                                 } else {
-                                    var color = randomColor({format: 'rgba', alpha:0});
+                                    var color = randomColor({format: 'rgba', alpha:1});
+                                    console.log(color);
                                     display_model.push(select.options[i].value);
                                     add_model_chart(select.options[i].value, chart, [data[i].humaneval, data[i].EvoEval_difficult, data[i].EvoEval_creative,
-                                                                                    data[i].EvoEval_subtle, data[i].EvoEval_combine, data[i].EvoEval_tool_use], color);
+                                                                                    data[i].EvoEval_subtle, data[i].EvoEval_combine, data[i].EvoEval_tool_use,
+                                                                                    data[i].EvoEval_verbose, data[i].EvoEval_concise], color);
                                     // clear selection
                                     select.options[i].selected = false;
                                 }
@@ -102,8 +104,8 @@
         chart.data.datasets.push({
             label: map_id_to_name(model),
             data: newData,
-            fill: true,
-            backgroundColor: color
+            fill: false,
+            borderColor: color
         });
         chart.update();
     }
@@ -116,14 +118,18 @@
     function draw_chart(models, model_data) {
       var ctx = document.getElementById('myChart');
 
-      var dataset_labels = ['HumanEval', 'Difficult', 'Creative', 'Subtle', 'Combine', 'Tool Use'];
+      var dataset_labels = ['HumanEval', 'Difficult', 'Creative', 'Subtle', 'Combine', 'Tool Use', 'Verbose', 'Concise'];
       var graph_data = []
       for (var i = 0; i < model_data.length; i++) {
           if (models.includes(model_data[i].name)) {
+              var color = randomColor({format: 'rgba', alpha:1});
               graph_data.push(
                   {label: map_id_to_name(model_data[i].name),
-                   data:  [model_data[i].humaneval, model_data[i].EvoEval_difficult, model_data[i].EvoEval_creative, model_data[i].EvoEval_subtle, model_data[i].EvoEval_combine, model_data[i].EvoEval_tool_use],
-                   fill: true
+                   data:  [model_data[i].humaneval, model_data[i].EvoEval_difficult, model_data[i].EvoEval_creative,
+                           model_data[i].EvoEval_subtle, model_data[i].EvoEval_combine, model_data[i].EvoEval_tool_use,
+                           model_data[i].EvoEval_verbose, model_data[i].EvoEval_concise],
+                   fill: false,
+                   borderColor: color
                   });
           }
       }
@@ -182,7 +188,10 @@
           Select a model from the dropdown to add or remove it from the radar chart.
       </p>
   <table width="45%">
-      <td width="5%" style="background-color: #FFFFFF"> <select size="10" id="modelSelection" > </select> </td>
+      <td width="5%" style="background-color: #FFFFFF">
+          <p> Model Selection </p>
+      <select size="20" id="modelSelection" > </select>
+      </td>
       <td width="95%" style="background-color: #FFFFFF"><div class="container"> <canvas id="myChart"></canvas>
    </div> </td>
   </table>

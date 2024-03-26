@@ -12,7 +12,11 @@
         "EvoEval_combine_rank": 2,
         "EvoEval_combine": 0.45,
         "EvoEval_tool_use_rank": 2,
-        "EvoEval_tool_use": 0.66
+        "EvoEval_tool_use": 0.69,
+        "EvoEval_verbose_rank": 2,
+        "EvoEval_verbose": 0.7926829268292683,
+        "EvoEval_concise_rank": 3,
+        "EvoEval_concise": 0.7926829268292683
     },
     {
         "name": "gpt-4",
@@ -26,8 +30,12 @@
         "EvoEval_subtle": 0.76,
         "EvoEval_combine_rank": 1,
         "EvoEval_combine": 0.53,
-        "EvoEval_tool_use_rank": 2,
-        "EvoEval_tool_use": 0.66
+        "EvoEval_tool_use_rank": 3,
+        "EvoEval_tool_use": 0.67,
+        "EvoEval_verbose_rank": 10,
+        "EvoEval_verbose": 0.7012195121951219,
+        "EvoEval_concise_rank": 1,
+        "EvoEval_concise": 0.8109756097560976
     },
     {
         "name": "chatgpt",
@@ -42,7 +50,11 @@
         "EvoEval_combine_rank": 4,
         "EvoEval_combine": 0.33,
         "EvoEval_tool_use_rank": 4,
-        "EvoEval_tool_use": 0.65
+        "EvoEval_tool_use": 0.65,
+        "EvoEval_verbose_rank": 9,
+        "EvoEval_verbose": 0.7073170731707317,
+        "EvoEval_concise_rank": 12,
+        "EvoEval_concise": 0.6829268292682927
     },
     {
         "name": "claude-3",
@@ -51,13 +63,17 @@
         "EvoEval_difficult_rank": 2,
         "EvoEval_difficult": 0.49,
         "EvoEval_creative_rank": 3,
-        "EvoEval_creative": 0.52,
+        "EvoEval_creative": 0.53,
         "EvoEval_subtle_rank": 2,
         "EvoEval_subtle": 0.81,
         "EvoEval_combine_rank": 3,
-        "EvoEval_combine": 0.4,
+        "EvoEval_combine": 0.42,
         "EvoEval_tool_use_rank": 1,
-        "EvoEval_tool_use": 0.68
+        "EvoEval_tool_use": 0.7,
+        "EvoEval_verbose_rank": 1,
+        "EvoEval_verbose": 0.8109756097560976,
+        "EvoEval_concise_rank": 2,
+        "EvoEval_concise": 0.8048780487804879
     },
     {
         "name": "claude-3-haiku",
@@ -71,8 +87,12 @@
         "EvoEval_subtle": 0.65,
         "EvoEval_combine_rank": 6,
         "EvoEval_combine": 0.25,
-        "EvoEval_tool_use_rank": 12,
-        "EvoEval_tool_use": 0.59
+        "EvoEval_tool_use_rank": 10,
+        "EvoEval_tool_use": 0.61,
+        "EvoEval_verbose_rank": 8,
+        "EvoEval_verbose": 0.7134146341463414,
+        "EvoEval_concise_rank": 6,
+        "EvoEval_concise": 0.7195121951219512
     },
     {
         "name": "claude-2",
@@ -86,8 +106,12 @@
         "EvoEval_subtle": 0.64,
         "EvoEval_combine_rank": 14,
         "EvoEval_combine": 0.19,
-        "EvoEval_tool_use_rank": 19,
-        "EvoEval_tool_use": 0.55
+        "EvoEval_tool_use_rank": 16,
+        "EvoEval_tool_use": 0.57,
+        "EvoEval_verbose_rank": 14,
+        "EvoEval_verbose": 0.6646341463414634,
+        "EvoEval_concise_rank": 10,
+        "EvoEval_concise": 0.6951219512195121
     },
     {
         "name": "gemini-pro",
@@ -102,7 +126,11 @@
         "EvoEval_combine_rank": 9,
         "EvoEval_combine": 0.23,
         "EvoEval_tool_use_rank": 16,
-        "EvoEval_tool_use": 0.56
+        "EvoEval_tool_use": 0.57,
+        "EvoEval_verbose_rank": 23,
+        "EvoEval_verbose": 0.5853658536585366,
+        "EvoEval_concise_rank": 22,
+        "EvoEval_concise": 0.5975609756097561
     },
     {
         "name": "palm",
@@ -117,7 +145,11 @@
         "EvoEval_combine_rank": 39,
         "EvoEval_combine": 0.03,
         "EvoEval_tool_use_rank": 28,
-        "EvoEval_tool_use": 0.47
+        "EvoEval_tool_use": 0.47,
+        "EvoEval_verbose_rank": 40,
+        "EvoEval_verbose": 0.38414634146341464,
+        "EvoEval_concise_rank": 38,
+        "EvoEval_concise": 0.36585365853658536
     },
     {
         "name": "deepseek-coder-33b-instruct",
@@ -132,7 +164,11 @@
         "EvoEval_combine_rank": 5,
         "EvoEval_combine": 0.31,
         "EvoEval_tool_use_rank": 4,
-        "EvoEval_tool_use": 0.65
+        "EvoEval_tool_use": 0.65,
+        "EvoEval_verbose_rank": 3,
+        "EvoEval_verbose": 0.75,
+        "EvoEval_concise_rank": 5,
+        "EvoEval_concise": 0.725609756097561
     },
     {
         "name": "deepseek-coder-6.7b-instruct",
@@ -147,7 +183,11 @@
         "EvoEval_combine_rank": 15,
         "EvoEval_combine": 0.18,
         "EvoEval_tool_use_rank": 24,
-        "EvoEval_tool_use": 0.5
+        "EvoEval_tool_use": 0.5,
+        "EvoEval_verbose_rank": 5,
+        "EvoEval_verbose": 0.725609756097561,
+        "EvoEval_concise_rank": 6,
+        "EvoEval_concise": 0.7195121951219512
     },
     {
         "name": "deepseek-coder-1.3b-instruct",
@@ -162,7 +202,11 @@
         "EvoEval_combine_rank": 28,
         "EvoEval_combine": 0.09,
         "EvoEval_tool_use_rank": 43,
-        "EvoEval_tool_use": 0.38
+        "EvoEval_tool_use": 0.38,
+        "EvoEval_verbose_rank": 24,
+        "EvoEval_verbose": 0.573170731707317,
+        "EvoEval_concise_rank": 19,
+        "EvoEval_concise": 0.6097560975609756
     },
     {
         "name": "deepseek-coder-33b",
@@ -177,7 +221,11 @@
         "EvoEval_combine_rank": 25,
         "EvoEval_combine": 0.11,
         "EvoEval_tool_use_rank": 7,
-        "EvoEval_tool_use": 0.63
+        "EvoEval_tool_use": 0.63,
+        "EvoEval_verbose_rank": 21,
+        "EvoEval_verbose": 0.6097560975609756,
+        "EvoEval_concise_rank": 24,
+        "EvoEval_concise": 0.5487804878048781
     },
     {
         "name": "deepseek-coder-6.7b",
@@ -191,8 +239,12 @@
         "EvoEval_subtle": 0.47,
         "EvoEval_combine_rank": 34,
         "EvoEval_combine": 0.05,
-        "EvoEval_tool_use_rank": 16,
-        "EvoEval_tool_use": 0.56
+        "EvoEval_tool_use_rank": 18,
+        "EvoEval_tool_use": 0.56,
+        "EvoEval_verbose_rank": 24,
+        "EvoEval_verbose": 0.573170731707317,
+        "EvoEval_concise_rank": 31,
+        "EvoEval_concise": 0.4695121951219512
     },
     {
         "name": "deepseek-coder-1.3b",
@@ -207,7 +259,11 @@
         "EvoEval_combine_rank": 51,
         "EvoEval_combine": 0.0,
         "EvoEval_tool_use_rank": 40,
-        "EvoEval_tool_use": 0.39
+        "EvoEval_tool_use": 0.39,
+        "EvoEval_verbose_rank": 37,
+        "EvoEval_verbose": 0.4024390243902439,
+        "EvoEval_concise_rank": 41,
+        "EvoEval_concise": 0.3353658536585366
     },
     {
         "name": "deepseek-coder-7b-instruct-v1.5",
@@ -221,8 +277,12 @@
         "EvoEval_subtle": 0.66,
         "EvoEval_combine_rank": 8,
         "EvoEval_combine": 0.24,
-        "EvoEval_tool_use_rank": 12,
-        "EvoEval_tool_use": 0.59
+        "EvoEval_tool_use_rank": 13,
+        "EvoEval_tool_use": 0.59,
+        "EvoEval_verbose_rank": 18,
+        "EvoEval_verbose": 0.6524390243902439,
+        "EvoEval_concise_rank": 13,
+        "EvoEval_concise": 0.676829268292683
     },
     {
         "name": "deepseek-coder-7b-base-v1.5",
@@ -236,8 +296,12 @@
         "EvoEval_subtle": 0.43,
         "EvoEval_combine_rank": 37,
         "EvoEval_combine": 0.04,
-        "EvoEval_tool_use_rank": 19,
-        "EvoEval_tool_use": 0.55
+        "EvoEval_tool_use_rank": 20,
+        "EvoEval_tool_use": 0.55,
+        "EvoEval_verbose_rank": 26,
+        "EvoEval_verbose": 0.5487804878048781,
+        "EvoEval_concise_rank": 29,
+        "EvoEval_concise": 0.4878048780487805
     },
     {
         "name": "code-llama-70b-instruct",
@@ -252,7 +316,11 @@
         "EvoEval_combine_rank": 17,
         "EvoEval_combine": 0.17,
         "EvoEval_tool_use_rank": 4,
-        "EvoEval_tool_use": 0.65
+        "EvoEval_tool_use": 0.65,
+        "EvoEval_verbose_rank": 16,
+        "EvoEval_verbose": 0.6585365853658537,
+        "EvoEval_concise_rank": 19,
+        "EvoEval_concise": 0.6097560975609756
     },
     {
         "name": "code-llama-34b-instruct",
@@ -267,7 +335,11 @@
         "EvoEval_combine_rank": 28,
         "EvoEval_combine": 0.09,
         "EvoEval_tool_use_rank": 26,
-        "EvoEval_tool_use": 0.48
+        "EvoEval_tool_use": 0.48,
+        "EvoEval_verbose_rank": 37,
+        "EvoEval_verbose": 0.4024390243902439,
+        "EvoEval_concise_rank": 27,
+        "EvoEval_concise": 0.5
     },
     {
         "name": "code-llama-13b-instruct",
@@ -282,7 +354,11 @@
         "EvoEval_combine_rank": 31,
         "EvoEval_combine": 0.08,
         "EvoEval_tool_use_rank": 21,
-        "EvoEval_tool_use": 0.54
+        "EvoEval_tool_use": 0.54,
+        "EvoEval_verbose_rank": 30,
+        "EvoEval_verbose": 0.4634146341463415,
+        "EvoEval_concise_rank": 30,
+        "EvoEval_concise": 0.4817073170731707
     },
     {
         "name": "code-llama-7b-instruct",
@@ -297,7 +373,11 @@
         "EvoEval_combine_rank": 31,
         "EvoEval_combine": 0.08,
         "EvoEval_tool_use_rank": 33,
-        "EvoEval_tool_use": 0.44
+        "EvoEval_tool_use": 0.44,
+        "EvoEval_verbose_rank": 32,
+        "EvoEval_verbose": 0.45121951219512196,
+        "EvoEval_concise_rank": 36,
+        "EvoEval_concise": 0.4146341463414634
     },
     {
         "name": "code-llama-70b-python",
@@ -312,7 +392,11 @@
         "EvoEval_combine_rank": 20,
         "EvoEval_combine": 0.14,
         "EvoEval_tool_use_rank": 7,
-        "EvoEval_tool_use": 0.63
+        "EvoEval_tool_use": 0.63,
+        "EvoEval_verbose_rank": 22,
+        "EvoEval_verbose": 0.5975609756097561,
+        "EvoEval_concise_rank": 23,
+        "EvoEval_concise": 0.5670731707317073
     },
     {
         "name": "code-llama-34b-python",
@@ -327,7 +411,11 @@
         "EvoEval_combine_rank": 25,
         "EvoEval_combine": 0.11,
         "EvoEval_tool_use_rank": 37,
-        "EvoEval_tool_use": 0.43
+        "EvoEval_tool_use": 0.43,
+        "EvoEval_verbose_rank": 35,
+        "EvoEval_verbose": 0.42073170731707316,
+        "EvoEval_concise_rank": 28,
+        "EvoEval_concise": 0.49390243902439024
     },
     {
         "name": "code-llama-13b-python",
@@ -342,7 +430,11 @@
         "EvoEval_combine_rank": 34,
         "EvoEval_combine": 0.05,
         "EvoEval_tool_use_rank": 26,
-        "EvoEval_tool_use": 0.48
+        "EvoEval_tool_use": 0.48,
+        "EvoEval_verbose_rank": 42,
+        "EvoEval_verbose": 0.36585365853658536,
+        "EvoEval_concise_rank": 31,
+        "EvoEval_concise": 0.4695121951219512
     },
     {
         "name": "code-llama-7b-python",
@@ -357,7 +449,11 @@
         "EvoEval_combine_rank": 39,
         "EvoEval_combine": 0.03,
         "EvoEval_tool_use_rank": 33,
-        "EvoEval_tool_use": 0.44
+        "EvoEval_tool_use": 0.44,
+        "EvoEval_verbose_rank": 34,
+        "EvoEval_verbose": 0.43902439024390244,
+        "EvoEval_concise_rank": 38,
+        "EvoEval_concise": 0.36585365853658536
     },
     {
         "name": "wizardcoder-34b",
@@ -372,7 +468,11 @@
         "EvoEval_combine_rank": 17,
         "EvoEval_combine": 0.17,
         "EvoEval_tool_use_rank": 21,
-        "EvoEval_tool_use": 0.54
+        "EvoEval_tool_use": 0.54,
+        "EvoEval_verbose_rank": 20,
+        "EvoEval_verbose": 0.6341463414634146,
+        "EvoEval_concise_rank": 19,
+        "EvoEval_concise": 0.6097560975609756
     },
     {
         "name": "wizardcoder-33b-1.1",
@@ -387,7 +487,11 @@
         "EvoEval_combine_rank": 13,
         "EvoEval_combine": 0.2,
         "EvoEval_tool_use_rank": 7,
-        "EvoEval_tool_use": 0.63
+        "EvoEval_tool_use": 0.63,
+        "EvoEval_verbose_rank": 7,
+        "EvoEval_verbose": 0.7195121951219512,
+        "EvoEval_concise_rank": 4,
+        "EvoEval_concise": 0.7378048780487805
     },
     {
         "name": "xwincoder-34b",
@@ -401,8 +505,12 @@
         "EvoEval_subtle": 0.67,
         "EvoEval_combine_rank": 20,
         "EvoEval_combine": 0.14,
-        "EvoEval_tool_use_rank": 11,
-        "EvoEval_tool_use": 0.6
+        "EvoEval_tool_use_rank": 12,
+        "EvoEval_tool_use": 0.6,
+        "EvoEval_verbose_rank": 13,
+        "EvoEval_verbose": 0.6707317073170732,
+        "EvoEval_concise_rank": 11,
+        "EvoEval_concise": 0.6890243902439024
     },
     {
         "name": "phind-code-llama-34b-v2",
@@ -417,7 +525,11 @@
         "EvoEval_combine_rank": 6,
         "EvoEval_combine": 0.25,
         "EvoEval_tool_use_rank": 14,
-        "EvoEval_tool_use": 0.58
+        "EvoEval_tool_use": 0.58,
+        "EvoEval_verbose_rank": 5,
+        "EvoEval_verbose": 0.725609756097561,
+        "EvoEval_concise_rank": 9,
+        "EvoEval_concise": 0.7073170731707317
     },
     {
         "name": "code-millenials-34b",
@@ -431,8 +543,12 @@
         "EvoEval_subtle": 0.65,
         "EvoEval_combine_rank": 17,
         "EvoEval_combine": 0.17,
-        "EvoEval_tool_use_rank": 16,
-        "EvoEval_tool_use": 0.56
+        "EvoEval_tool_use_rank": 18,
+        "EvoEval_tool_use": 0.56,
+        "EvoEval_verbose_rank": 4,
+        "EvoEval_verbose": 0.7439024390243902,
+        "EvoEval_concise_rank": 8,
+        "EvoEval_concise": 0.7134146341463414
     },
     {
         "name": "speechless-codellama-34b",
@@ -447,7 +563,11 @@
         "EvoEval_combine_rank": 9,
         "EvoEval_combine": 0.23,
         "EvoEval_tool_use_rank": 14,
-        "EvoEval_tool_use": 0.58
+        "EvoEval_tool_use": 0.58,
+        "EvoEval_verbose_rank": 12,
+        "EvoEval_verbose": 0.6829268292682927,
+        "EvoEval_concise_rank": 13,
+        "EvoEval_concise": 0.676829268292683
     },
     {
         "name": "magicoder-s-ds-6.7b",
@@ -462,7 +582,11 @@
         "EvoEval_combine_rank": 11,
         "EvoEval_combine": 0.21,
         "EvoEval_tool_use_rank": 10,
-        "EvoEval_tool_use": 0.61
+        "EvoEval_tool_use": 0.61,
+        "EvoEval_verbose_rank": 11,
+        "EvoEval_verbose": 0.6951219512195121,
+        "EvoEval_concise_rank": 15,
+        "EvoEval_concise": 0.6646341463414634
     },
     {
         "name": "magicoder-s-cl-7b",
@@ -477,7 +601,11 @@
         "EvoEval_combine_rank": 25,
         "EvoEval_combine": 0.11,
         "EvoEval_tool_use_rank": 23,
-        "EvoEval_tool_use": 0.52
+        "EvoEval_tool_use": 0.52,
+        "EvoEval_verbose_rank": 16,
+        "EvoEval_verbose": 0.6585365853658537,
+        "EvoEval_concise_rank": 16,
+        "EvoEval_concise": 0.6402439024390244
     },
     {
         "name": "starcoder2-15b",
@@ -492,7 +620,11 @@
         "EvoEval_combine_rank": 34,
         "EvoEval_combine": 0.05,
         "EvoEval_tool_use_rank": 25,
-        "EvoEval_tool_use": 0.49
+        "EvoEval_tool_use": 0.49,
+        "EvoEval_verbose_rank": 30,
+        "EvoEval_verbose": 0.4634146341463415,
+        "EvoEval_concise_rank": 35,
+        "EvoEval_concise": 0.42073170731707316
     },
     {
         "name": "starcoder2-7b",
@@ -507,7 +639,11 @@
         "EvoEval_combine_rank": 45,
         "EvoEval_combine": 0.02,
         "EvoEval_tool_use_rank": 30,
-        "EvoEval_tool_use": 0.45
+        "EvoEval_tool_use": 0.45,
+        "EvoEval_verbose_rank": 41,
+        "EvoEval_verbose": 0.3780487804878049,
+        "EvoEval_concise_rank": 40,
+        "EvoEval_concise": 0.35365853658536583
     },
     {
         "name": "starcoder2-3b",
@@ -522,7 +658,11 @@
         "EvoEval_combine_rank": 45,
         "EvoEval_combine": 0.02,
         "EvoEval_tool_use_rank": 45,
-        "EvoEval_tool_use": 0.33
+        "EvoEval_tool_use": 0.33,
+        "EvoEval_verbose_rank": 45,
+        "EvoEval_verbose": 0.32926829268292684,
+        "EvoEval_concise_rank": 41,
+        "EvoEval_concise": 0.3353658536585366
     },
     {
         "name": "starcoder",
@@ -537,7 +677,11 @@
         "EvoEval_combine_rank": 45,
         "EvoEval_combine": 0.02,
         "EvoEval_tool_use_rank": 33,
-        "EvoEval_tool_use": 0.44
+        "EvoEval_tool_use": 0.44,
+        "EvoEval_verbose_rank": 43,
+        "EvoEval_verbose": 0.3475609756097561,
+        "EvoEval_concise_rank": 41,
+        "EvoEval_concise": 0.3353658536585366
     },
     {
         "name": "mixtral-8x7b-instruct",
@@ -552,7 +696,11 @@
         "EvoEval_combine_rank": 28,
         "EvoEval_combine": 0.09,
         "EvoEval_tool_use_rank": 33,
-        "EvoEval_tool_use": 0.44
+        "EvoEval_tool_use": 0.44,
+        "EvoEval_verbose_rank": 36,
+        "EvoEval_verbose": 0.40853658536585363,
+        "EvoEval_concise_rank": 33,
+        "EvoEval_concise": 0.43902439024390244
     },
     {
         "name": "mistral-7b-instruct-v02",
@@ -567,7 +715,11 @@
         "EvoEval_combine_rank": 39,
         "EvoEval_combine": 0.03,
         "EvoEval_tool_use_rank": 51,
-        "EvoEval_tool_use": 0.08
+        "EvoEval_tool_use": 0.08,
+        "EvoEval_verbose_rank": 50,
+        "EvoEval_verbose": 0.23170731707317074,
+        "EvoEval_concise_rank": 48,
+        "EvoEval_concise": 0.2804878048780488
     },
     {
         "name": "mistral-7b-instruct",
@@ -582,7 +734,11 @@
         "EvoEval_combine_rank": 39,
         "EvoEval_combine": 0.03,
         "EvoEval_tool_use_rank": 48,
-        "EvoEval_tool_use": 0.29
+        "EvoEval_tool_use": 0.29,
+        "EvoEval_verbose_rank": 49,
+        "EvoEval_verbose": 0.2682926829268293,
+        "EvoEval_concise_rank": 48,
+        "EvoEval_concise": 0.2804878048780488
     },
     {
         "name": "mistral-7b",
@@ -597,7 +753,11 @@
         "EvoEval_combine_rank": 39,
         "EvoEval_combine": 0.03,
         "EvoEval_tool_use_rank": 40,
-        "EvoEval_tool_use": 0.39
+        "EvoEval_tool_use": 0.39,
+        "EvoEval_verbose_rank": 46,
+        "EvoEval_verbose": 0.31097560975609756,
+        "EvoEval_concise_rank": 47,
+        "EvoEval_concise": 0.2926829268292683
     },
     {
         "name": "openchat",
@@ -612,7 +772,11 @@
         "EvoEval_combine_rank": 20,
         "EvoEval_combine": 0.14,
         "EvoEval_tool_use_rank": 37,
-        "EvoEval_tool_use": 0.43
+        "EvoEval_tool_use": 0.43,
+        "EvoEval_verbose_rank": 14,
+        "EvoEval_verbose": 0.6646341463414634,
+        "EvoEval_concise_rank": 16,
+        "EvoEval_concise": 0.6402439024390244
     },
     {
         "name": "stable-code-3b",
@@ -627,7 +791,11 @@
         "EvoEval_combine_rank": 39,
         "EvoEval_combine": 0.03,
         "EvoEval_tool_use_rank": 39,
-        "EvoEval_tool_use": 0.42
+        "EvoEval_tool_use": 0.42,
+        "EvoEval_verbose_rank": 46,
+        "EvoEval_verbose": 0.31097560975609756,
+        "EvoEval_concise_rank": 44,
+        "EvoEval_concise": 0.31097560975609756
     },
     {
         "name": "gemma-7b-instruct",
@@ -642,7 +810,11 @@
         "EvoEval_combine_rank": 45,
         "EvoEval_combine": 0.02,
         "EvoEval_tool_use_rank": 47,
-        "EvoEval_tool_use": 0.31
+        "EvoEval_tool_use": 0.31,
+        "EvoEval_verbose_rank": 48,
+        "EvoEval_verbose": 0.2926829268292683,
+        "EvoEval_concise_rank": 50,
+        "EvoEval_concise": 0.2621951219512195
     },
     {
         "name": "gemma-7b",
@@ -657,7 +829,11 @@
         "EvoEval_combine_rank": 45,
         "EvoEval_combine": 0.02,
         "EvoEval_tool_use_rank": 40,
-        "EvoEval_tool_use": 0.39
+        "EvoEval_tool_use": 0.39,
+        "EvoEval_verbose_rank": 44,
+        "EvoEval_verbose": 0.3353658536585366,
+        "EvoEval_concise_rank": 44,
+        "EvoEval_concise": 0.31097560975609756
     },
     {
         "name": "gemma-2b",
@@ -672,7 +848,11 @@
         "EvoEval_combine_rank": 45,
         "EvoEval_combine": 0.02,
         "EvoEval_tool_use_rank": 50,
-        "EvoEval_tool_use": 0.21
+        "EvoEval_tool_use": 0.21,
+        "EvoEval_verbose_rank": 50,
+        "EvoEval_verbose": 0.23170731707317074,
+        "EvoEval_concise_rank": 51,
+        "EvoEval_concise": 0.21341463414634146
     },
     {
         "name": "phi-2",
@@ -687,7 +867,11 @@
         "EvoEval_combine_rank": 20,
         "EvoEval_combine": 0.14,
         "EvoEval_tool_use_rank": 44,
-        "EvoEval_tool_use": 0.37
+        "EvoEval_tool_use": 0.37,
+        "EvoEval_verbose_rank": 28,
+        "EvoEval_verbose": 0.5121951219512195,
+        "EvoEval_concise_rank": 26,
+        "EvoEval_concise": 0.5060975609756098
     },
     {
         "name": "qwen-72b-1.5",
@@ -702,7 +886,11 @@
         "EvoEval_combine_rank": 11,
         "EvoEval_combine": 0.21,
         "EvoEval_tool_use_rank": 29,
-        "EvoEval_tool_use": 0.46
+        "EvoEval_tool_use": 0.46,
+        "EvoEval_verbose_rank": 19,
+        "EvoEval_verbose": 0.6402439024390244,
+        "EvoEval_concise_rank": 16,
+        "EvoEval_concise": 0.6402439024390244
     },
     {
         "name": "qwen-14b-1.5",
@@ -717,7 +905,11 @@
         "EvoEval_combine_rank": 15,
         "EvoEval_combine": 0.18,
         "EvoEval_tool_use_rank": 30,
-        "EvoEval_tool_use": 0.45
+        "EvoEval_tool_use": 0.45,
+        "EvoEval_verbose_rank": 27,
+        "EvoEval_verbose": 0.5304878048780488,
+        "EvoEval_concise_rank": 25,
+        "EvoEval_concise": 0.5365853658536586
     },
     {
         "name": "qwen-7b-1.5",
@@ -732,7 +924,11 @@
         "EvoEval_combine_rank": 33,
         "EvoEval_combine": 0.07,
         "EvoEval_tool_use_rank": 46,
-        "EvoEval_tool_use": 0.32
+        "EvoEval_tool_use": 0.32,
+        "EvoEval_verbose_rank": 32,
+        "EvoEval_verbose": 0.45121951219512196,
+        "EvoEval_concise_rank": 37,
+        "EvoEval_concise": 0.40853658536585363
     },
     {
         "name": "qwen-14b",
@@ -747,7 +943,11 @@
         "EvoEval_combine_rank": 24,
         "EvoEval_combine": 0.13,
         "EvoEval_tool_use_rank": 30,
-        "EvoEval_tool_use": 0.45
+        "EvoEval_tool_use": 0.45,
+        "EvoEval_verbose_rank": 29,
+        "EvoEval_verbose": 0.4878048780487805,
+        "EvoEval_concise_rank": 34,
+        "EvoEval_concise": 0.4329268292682927
     },
     {
         "name": "qwen-7b",
@@ -762,6 +962,10 @@
         "EvoEval_combine_rank": 37,
         "EvoEval_combine": 0.04,
         "EvoEval_tool_use_rank": 49,
-        "EvoEval_tool_use": 0.28
+        "EvoEval_tool_use": 0.28,
+        "EvoEval_verbose_rank": 39,
+        "EvoEval_verbose": 0.39634146341463417,
+        "EvoEval_concise_rank": 46,
+        "EvoEval_concise": 0.3048780487804878
     }
 ]
