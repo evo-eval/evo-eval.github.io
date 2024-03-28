@@ -113,8 +113,8 @@
     }
 
     .inline-block-child {
-  display: inline-block;
-}
+        display: inline-block;
+    }
 
     @media screen and (max-width: 2000px) {
       body {
