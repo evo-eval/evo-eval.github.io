@@ -86,10 +86,10 @@
         }
 
         function compare( a, b ) {
-          if (a.humaneval < b.humaneval ){
+          if (a.joint_score < b.joint_score ){
             return 1;
           }
-          if (a.humaneval > b.humaneval){
+          if (a.joint_score > b.joint_score){
             return -1;
           }
           return 0;
@@ -114,11 +114,12 @@
         }
         function buildHtmlTable(data, selector) {
           data.sort(compare)
-          var headers = ['HumanEval', 'Difficult', 'Creative', 'Subtle', 'Combine', 'Tool Use']
+          var headers = ['EvoEval', 'HumanEval', 'Difficult', 'Creative', 'Subtle', 'Combine', 'Tool Use']
           addAllColumnHeaders(headers, selector);
 
           let header_dataset_map = new Map();
           // used to map header to dataset
+          header_dataset_map.set('EvoEval', 'joint_score');
           header_dataset_map.set('HumanEval', 'humaneval');
           header_dataset_map.set('Difficult', 'EvoEval_difficult');
           header_dataset_map.set('Creative', 'EvoEval_creative');
@@ -144,7 +145,11 @@
 
 
             for (var j = 0; j < headers.length; j++) {
-              var cellValue = (100*data[i][header_dataset_map.get(headers[j])]).toFixed(1);
+              if (headers[j] === "EvoEval") {
+                  var cellValue = (data[i][header_dataset_map.get(headers[j])]).toFixed(1);
+              } else {
+                  var cellValue = (100 * data[i][header_dataset_map.get(headers[j])]).toFixed(1);
+              }
               if (cellValue == null) cellValue = "N/A";
               row$.append($('<td/>').html(cellValue));
 
@@ -182,6 +187,8 @@
                 path = "resources/butterfly_yellow.png"
             } else if (rowHash == "Tool Use") {
                 path = "resources/butterfly_red.png"
+            } else if (rowHash == "EvoEval") {
+                path = "resources/butterfly.png"
             }
 
             if (path === "") {
@@ -217,7 +224,7 @@
 
       <h3 class="text-nowrap mt-5"> 🏆 Leaderboard 🏆 </h3>
       <p>
-          Leaderboard shows the <b>pass@1</b> and <b>ranking</b> of LLMs on EvoEval benchmarks. We label instruction-following models
+          Leaderboard shows the <b>pass@1</b> and <b>ranking</b> of LLMs on EvoEval benchmarks ordered by EvoEval score (average of all benchmarks). We label instruction-following models
           with <img src="static/speech.png">.
       </p>
 </div>
