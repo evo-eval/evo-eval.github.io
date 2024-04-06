@@ -114,7 +114,7 @@
         }
         function buildHtmlTable(data, selector) {
           data.sort(compare)
-          var headers = ['EvoEval', 'HumanEval', 'Difficult', 'Creative', 'Subtle', 'Combine', 'Tool Use']
+          var headers = ['EvoEval (Overall)', 'HumanEval', 'Difficult', 'Creative', 'Subtle', 'Combine', 'Tool Use']
           addAllColumnHeaders(headers, selector);
 
           let header_dataset_map = new Map();
