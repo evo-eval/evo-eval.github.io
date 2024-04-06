@@ -119,7 +119,7 @@
 
           let header_dataset_map = new Map();
           // used to map header to dataset
-          header_dataset_map.set('EvoEval', 'joint_score');
+          header_dataset_map.set('EvoEval (Overall)', 'joint_score');
           header_dataset_map.set('HumanEval', 'humaneval');
           header_dataset_map.set('Difficult', 'EvoEval_difficult');
           header_dataset_map.set('Creative', 'EvoEval_creative');
@@ -145,14 +145,14 @@
 
 
             for (var j = 0; j < headers.length; j++) {
-              if (headers[j] === "EvoEval") {
+              if (headers[j] === "EvoEval (Overall)") {
                   var cellValue = (data[i][header_dataset_map.get(headers[j])]).toFixed(1);
               } else {
                   var cellValue = (100 * data[i][header_dataset_map.get(headers[j])]).toFixed(1);
               }
               if (cellValue == null) cellValue = "N/A";
               // if from evoeval, bold the text
-              if (headers[j] === "EvoEval") {
+              if (headers[j] === "EvoEval (Overall)") {
                   row$.append($('<td/>').html("<b>" + cellValue + "</b>").attr("class", "evoeval"));
               } else {
                   row$.append($('<td/>').html(cellValue));
@@ -161,7 +161,7 @@
 
               var cellRank = (data[i][header_dataset_map.get(headers[j])+ "_rank"]);
               var className = "";
-              if (headers[j] === "EvoEval") {
+              if (headers[j] === "EvoEval (Overall)") {
                   className = "smalltd evoeval";
               } else {
                   className = "smalltd";
@@ -175,7 +175,7 @@
               } else if (cellRank == 3) {
                 row$.append($('<td/>').html("🥉").attr("class", className));
               } else {
-                  if (headers[j] === "EvoEval") {
+                  if (headers[j] === "EvoEval (Overall)") {
                       row$.append($('<td/>').html("<b>" + cellRank + "</b>").attr("class", className));
                   } else {
                       row$.append($('<td/>').html(cellRank).attr("class", className));
