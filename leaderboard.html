@@ -151,19 +151,35 @@
                   var cellValue = (100 * data[i][header_dataset_map.get(headers[j])]).toFixed(1);
               }
               if (cellValue == null) cellValue = "N/A";
-              row$.append($('<td/>').html(cellValue));
+              // if from evoeval, bold the text
+              if (headers[j] === "EvoEval") {
+                  row$.append($('<td/>').html("<b>" + cellValue + "</b>").attr("class", "evoeval"));
+              } else {
+                  row$.append($('<td/>').html(cellValue));
+              }
+
 
               var cellRank = (data[i][header_dataset_map.get(headers[j])+ "_rank"]);
+              var className = "";
+              if (headers[j] === "EvoEval") {
+                  className = "smalltd evoeval";
+              } else {
+                  className = "smalltd";
+              }
               // if rank <= 3 mark in red
               if (cellRank == 1) {
-                 row$.append($('<td/>').html("🥇").attr("class", "smalltd"));
+                 row$.append($('<td/>').html("🥇").attr("class", className));
               }
               else if (cellRank == 2) {
-                row$.append($('<td/>').html("🥈").attr("class", "smalltd"));
+                row$.append($('<td/>').html("🥈").attr("class", className));
               } else if (cellRank == 3) {
-                row$.append($('<td/>').html("🥉").attr("class", "smalltd"));
+                row$.append($('<td/>').html("🥉").attr("class", className));
               } else {
-                row$.append($('<td/>').html(cellRank).attr("class", "smalltd"));
+                  if (headers[j] === "EvoEval") {
+                      row$.append($('<td/>').html("<b>" + cellRank + "</b>").attr("class", className));
+                  } else {
+                      row$.append($('<td/>').html(cellRank).attr("class", className));
+                  }
               }
             }
 

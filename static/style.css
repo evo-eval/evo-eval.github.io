@@ -42,6 +42,7 @@
       /*font-size: 1.2em;*/
         padding: 0 15px;
     }
+
     td img {
         width: 1em;
         height: auto;
@@ -50,14 +51,24 @@
     tr:nth-child(even) td{
       background-color: #f2f2f2;
     }
+    tr:nth-child(even) td.evoeval{
+      background-color: #d9d1ed;
+    }
     tr:nth-child(odd) td{
       background-color: #e3dfed;
+    }
+    tr:nth-child(odd) td.evoeval{
+      background-color: #b2a7cc;
     }
 
 
     .smalltd {
         border-right: 2px solid black;
     }
+
+    /*.evoeval {*/
+    /*    background-color: white;*/
+    /*}*/
 
     .nametd {
         text-align: left;
